@@ -1,8 +1,10 @@
 @import url("https://use.typekit.net/erl1orb.css")
 @import 'mixins/responsive'
+@import 'mixins/highlight'
 
 $text: #000
 $accent: #ff1749
+$highlight: #f7ffb4
 $font-body: t26-carbon, monospace
 $font-titles: fleisch-wurst, sans-serif
 
@@ -40,7 +42,8 @@ p
   font-size: 1em
 
 ::selection
-  background: $accent
+  background: $highlight
+  color: $text
 
 .hands
   display: block
@@ -107,8 +110,12 @@ p
 .faq
   margin: 0 0 3vh
   &__checkbox
-    display: none
+    position: absolute
+    width: 0
+    height: 0
+    overflow: hidden
   &__question
+    position: relative
     font-family: $font-body
     font-weight: 700
     margin: 0
@@ -129,6 +136,8 @@ p
   &__answer
     display: none
     margin: 0.5em 0 0
+  &__checkbox:focus ~ &__question
+    +highlight
   &__checkbox:checked ~ &__question:before
     background: $accent
     transform: rotate(45deg) translateY(0.5em)
