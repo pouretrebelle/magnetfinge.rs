@@ -1,10 +1,11 @@
 @import url("https://use.typekit.net/erl1orb.css")
 @import 'mixins/responsive'
 @import 'mixins/highlight'
+@import 'mixins/aspect'
 
 $text: #000
 $accent: #ff1749
-$highlight: #f7ffb4
+$highlight: rgba(241, 255, 121, 0.5)
 $font-body: t26-carbon, monospace
 $font-titles: fleisch-wurst, sans-serif
 
@@ -40,6 +41,12 @@ h2
 
 p
   font-size: 1em
+
+a
+  +highlight
+  display: inline-block
+  text-decoration: none
+  color: $text
 
 ::selection
   background: $highlight
@@ -105,10 +112,10 @@ p
   margin: 0 auto
   padding-left: 2em
   &__title
-    margin: 0 0 3vh
+    margin: 0 0 1em
     
 .faq
-  margin: 0 0 3vh
+  margin: 0 0 1.5em
   &__checkbox
     position: absolute
     width: 0
@@ -143,3 +150,22 @@ p
     transform: rotate(45deg) translateY(0.5em)
   &__checkbox:checked ~ &__answer
     display: block
+
+.research
+  margin: 5em auto
+  max-width: 1200px
+  text-align: center
+  &__table
+    +bp('medium')
+      display: flex
+      justify-content: space-between
+  &__item
+    text-align: left
+    flex-basis: 49%
+    margin: 1.5em 0
+    &__video
+      +aspect(0.5625)
+  &__footnote
+    margin: 0 auto
+    max-width: 800px
+    font-size: 0.75em
