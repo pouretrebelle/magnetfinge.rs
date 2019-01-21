@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Magnet Finge.rs
+    style
+      | body {display: none; background: #ff1749}
+    link(rel='icon' type='image/png',href='/favicon.png' sizes='64x64')
+    meta(property='og:title' content='Magnet Finge.rs')
+    meta(name='twitter:title' content='Magnet Finge.rs')
+    meta(name='description' content='Magnet Finge.rs is a resource for magnetic finger implats, created by Charlotte Dann')
+    meta(name='og:description' content='Magnet Finge.rs is a resource for magnetic finger implats, created by Charlotte Dann')
+    meta(name='twitter:description' content='Magnet Finge.rs is a resource for magnetic finger implats, created by Charlotte Dann')
+    meta(property='og:image' content='http://magnetfinge.rs/opengraph.jpg')
+    meta(property='og:image:width' content='1200')
+    meta(property='og:image:height' content='630')
+    meta(name='twitter:image' content='http://magnetfinge.rs/twittercard.jpg')
+
+    script(async src='https://www.googletagmanager.com/gtag/js?id=UA-112639076-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112639076-1');
+
+  body
+    include parts/intro
+    include parts/tldr
+    include parts/faqs

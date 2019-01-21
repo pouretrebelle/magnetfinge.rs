@@ -1,0 +1,32 @@
+$breakpoints: ('small': 600px, 'medium': 900px,'large': 1200px)
+  
+@mixin bp($start, $end: null)
+  $value-start: map-get($breakpoints, $start)
+  @if ($end == null)
+    // just a min-width
+    @if ($value-start == null)
+      // arbitrary start value
+      @media (min-width: $start)
+        @content;
+    @else
+      // start grabbed from breakpoint map
+      @media (min-width: $value-start+1)
+        @content;
+  @else
+  // min and max-width
+    $value-end: map-get($breakpoints, $end);
+    @if ($value-start == null) // arbitrary start value
+      @if ($value-end == null) // arbitrary end value
+        @media (min-width: $start) and (max-width: $end)
+          @content;
+      @else // end grabbed from breakpoint map
+        @media (min-width: $start) and (max-width: $value-end)
+          @content;
+    @else // start grabbed from breakpoint map
+      @if ($value-end == null) // arbitrary end value
+        @media (min-width: $start-start+1) and (max-width: $end)
+          @content;
+      
+      @else // end grabbed from breakpoint map
+        @media (min-width: $value-start+1) and (max-width: $value-end)
+          @content;
