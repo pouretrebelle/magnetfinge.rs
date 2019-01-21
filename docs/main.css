@@ -1,0 +1,209 @@
+@import url(https://use.typekit.net/erl1orb.css);
+html {
+  font-size: 16px; }
+
+body {
+  display: block;
+  background: #fff;
+  color: #000;
+  margin: 0 1em;
+  font-family: t26-carbon, monospace;
+  font-size: 1.25rem;
+  line-height: 1; }
+  @media (min-width: 601px) {
+    body {
+      font-size: 2.5vw; } }
+  @media (min-width: 1201px) {
+    body {
+      font-size: 1.5rem; } }
+
+h1 {
+  font-family: fleisch-wurst, sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 400;
+  max-width: 650px;
+  margin: 1em auto; }
+
+h2 {
+  font-family: fleisch-wurst, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 0; }
+
+p {
+  font-size: 1em; }
+
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000; }
+  a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0.5em;
+    top: 0.25em;
+    left: 0;
+    background: rgba(241, 255, 121, 0.5);
+    z-index: -1; }
+
+::-moz-selection {
+  background: rgba(241, 255, 121, 0.5);
+  color: #000; }
+
+::selection {
+  background: rgba(241, 255, 121, 0.5);
+  color: #000; }
+
+.hands {
+  display: block;
+  width: 100%;
+  margin: 1rem 0; }
+  @media (min-width: 601px) {
+    .hands {
+      margin: 5vh auto 0;
+      width: 80%;
+      max-height: 50vh; } }
+  @media (min-width: 901px) {
+    .hands {
+      width: 60%; } }
+  .hands__outline {
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 0.125em; }
+    @media (min-width: 601px) {
+      .hands__outline {
+        stroke-width: 0.175em; } }
+    @media (min-width: 901px) {
+      .hands__outline {
+        stroke-width: 0.125em; } }
+  .hands__magnets {
+    fill: #ff1749; }
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh; }
+
+.tldr {
+  margin-bottom: 5em; }
+  .tldr__title {
+    text-align: center; }
+    @media (min-width: 601px) {
+      .tldr__title {
+        margin: 0 0 -1em; } }
+  .tldr__table {
+    max-width: 800px;
+    margin: 0 auto; }
+    @media (min-width: 601px) {
+      .tldr__table {
+        display: flex;
+        justify-content: center; } }
+  .tldr__column {
+    flex-basis: 50%;
+    text-align: center; }
+    .tldr__column__title {
+      margin: 1em 0 0.5em;
+      font-size: 1.5em;
+      width: 1em;
+      height: 1em;
+      fill: currentColor; }
+      .tldr__column__title--positive {
+        color: #11bc5a; }
+      .tldr__column__title--negative {
+        color: #e20031; }
+    .tldr__column__item {
+      margin: 0 0 1vw; }
+
+.faqs {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 2em; }
+  .faqs__title {
+    margin: 0 0 1em; }
+
+.faq {
+  margin: 0 0 1.5em; }
+  .faq__checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden; }
+  .faq__question {
+    position: relative;
+    font-family: t26-carbon, monospace;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .faq__question:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0.75em;
+      height: 0.325em;
+      border-radius: 0.175em;
+      background: #ddd;
+      margin: 0 0 0 -1.5em;
+      -webkit-transform-origin: 0.5em 0.5em;
+              transform-origin: 0.5em 0.5em;
+      -webkit-transform: rotate(0) translateY(0.25em);
+              transform: rotate(0) translateY(0.25em);
+      transition: all 0.1s linear; }
+  .faq__answer {
+    display: none;
+    margin: 0.5em 0 0; }
+  .faq__checkbox:focus ~ .faq__question {
+    position: relative; }
+    .faq__checkbox:focus ~ .faq__question:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 0.5em;
+      top: 0.25em;
+      left: 0;
+      background: rgba(241, 255, 121, 0.5);
+      z-index: -1; }
+  .faq__checkbox:checked ~ .faq__question:before {
+    background: #ff1749;
+    -webkit-transform: rotate(45deg) translateY(0.5em);
+            transform: rotate(45deg) translateY(0.5em); }
+  .faq__checkbox:checked ~ .faq__answer {
+    display: block; }
+
+.research {
+  margin: 5em auto;
+  max-width: 1200px;
+  text-align: center; }
+  @media (min-width: 901px) {
+    .research__table {
+      display: flex;
+      justify-content: space-between; } }
+  .research__item {
+    text-align: left;
+    flex-basis: 49%;
+    margin: 1.5em 0; }
+    .research__item__video {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; }
+      .research__item__video > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0; }
+  .research__footnote {
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 0.75em; }
+
