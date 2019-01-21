@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/erl1orb.css")
+@import 'vendor/normalize'
 @import 'mixins/responsive'
 @import 'mixins/highlight'
 @import 'mixins/aspect'
@@ -24,7 +25,7 @@ body
     font-size: 2.5vw
   +bp('large')
     font-size: 1.5rem
-  
+
 h1
   font-family: $font-titles
   text-align: center
@@ -105,7 +106,7 @@ a
       &--negative
         color: #e20031
     &__item
-      margin: 0 0 1vw
+      margin: 0 0 1em
       
 .faqs
   max-width: 800px
@@ -121,6 +122,7 @@ a
     width: 0
     height: 0
     overflow: hidden
+    -webkit-appearance: none
   &__question
     position: relative
     font-family: $font-body
