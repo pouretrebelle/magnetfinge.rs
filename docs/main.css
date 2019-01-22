@@ -184,7 +184,7 @@ html {
 body {
   display: block;
   background: #fff;
-  color: #000;
+  color: #000044;
   margin: 0 1em;
   font-family: t26-carbon, monospace;
   font-size: 1.25rem;
@@ -218,7 +218,7 @@ a {
   z-index: 1;
   display: inline-block;
   text-decoration: none;
-  color: #000; }
+  color: #000044; }
   a:after {
     content: '';
     display: block;
@@ -232,11 +232,11 @@ a {
 
 ::-moz-selection {
   background: rgba(241, 255, 121, 0.5);
-  color: #000; }
+  color: #000044; }
 
 ::selection {
   background: rgba(241, 255, 121, 0.5);
-  color: #000; }
+  color: #000044; }
 
 .background {
   position: fixed;
@@ -258,7 +258,7 @@ a {
       width: 60%; } }
   .hands__outline {
     fill: transparent;
-    stroke: #000;
+    stroke: #000044;
     stroke-width: 0.125em; }
     @media (min-width: 601px) {
       .hands__outline {
@@ -327,6 +327,7 @@ a {
     overflow: hidden;
     -webkit-appearance: none; }
   .faq__question {
+    display: inline-block;
     position: relative;
     font-family: t26-carbon, monospace;
     font-weight: 700;
@@ -402,4 +403,15 @@ a {
     margin: 0 auto;
     max-width: 800px;
     font-size: 0.75em; }
+
+.footer {
+  text-align: center;
+  margin-bottom: 2em; }
+  .footer__hand {
+    width: 2em;
+    margin-bottom: 1em; }
+    .footer__hand__outline {
+      fill: #000044; }
+    .footer__hand__magnet {
+      fill: #ff1749; }
 
