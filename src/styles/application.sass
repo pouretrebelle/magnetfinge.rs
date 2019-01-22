@@ -79,7 +79,7 @@ a
       stroke-width: 0.125em
   &__magnets
     fill: $accent
-    
+
 .intro
   display: flex
   flex-direction: column
@@ -87,7 +87,7 @@ a
   min-height: 100vh
   
 .tldr
-  margin-bottom: 5em
+  margin-bottom: 4em
   &__title
     text-align: center
     +bp('small')
@@ -116,13 +116,17 @@ a
       
 .faqs
   max-width: 800px
-  margin: 0 auto
-  padding-left: 2em
+  margin: 0 auto 4em
+  +bp('small')
+    padding-left: 1.5em
   &__title
     margin: 0 0 1em
     
 .faq
   margin: 0 0 1.5em
+  padding-left: 1.5em
+  +bp('small')
+    padding-left: 0
   &__checkbox
     position: absolute
     width: 0
@@ -160,9 +164,10 @@ a
     display: block
 
 .research
-  margin: 5em auto
+  margin: 0 auto 4em
   max-width: 1200px
-  text-align: center
+  +bp('small')
+    text-align: center
   &__table
     +bp('medium')
       display: flex
