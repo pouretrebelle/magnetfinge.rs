@@ -276,7 +276,7 @@ a {
   min-height: 100vh; }
 
 .tldr {
-  margin-bottom: 5em; }
+  margin-bottom: 4em; }
   .tldr__title {
     text-align: center; }
     @media (min-width: 601px) {
@@ -307,13 +307,19 @@ a {
 
 .faqs {
   max-width: 800px;
-  margin: 0 auto;
-  padding-left: 2em; }
+  margin: 0 auto 4em; }
+  @media (min-width: 601px) {
+    .faqs {
+      padding-left: 1.5em; } }
   .faqs__title {
     margin: 0 0 1em; }
 
 .faq {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5em;
+  padding-left: 1.5em; }
+  @media (min-width: 601px) {
+    .faq {
+      padding-left: 0; } }
   .faq__checkbox {
     position: absolute;
     width: 0;
@@ -368,9 +374,11 @@ a {
     display: block; }
 
 .research {
-  margin: 5em auto;
-  max-width: 1200px;
-  text-align: center; }
+  margin: 0 auto 4em;
+  max-width: 1200px; }
+  @media (min-width: 601px) {
+    .research {
+      text-align: center; } }
   @media (min-width: 901px) {
     .research__table {
       display: flex;
