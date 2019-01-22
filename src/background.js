@@ -52,7 +52,10 @@ const draw = () => {
   c.fillStyle = background.backgroundColor;
   c.fillRect(0, 0, c.canvas.width, c.canvas.height);
   c.save();
-  c.translate(-background.scrollX, -background.scrollY);
+  c.translate(
+    -background.scrollX * PIXEL_RATIO,
+    -background.scrollY * PIXEL_RATIO
+  );
 
   magnets.forEach((magnet) => magnet.rings.forEach((ring) => ring.draw()));
 
