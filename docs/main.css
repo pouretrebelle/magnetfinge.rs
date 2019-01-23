@@ -414,4 +414,7 @@ a:not(.plain) {
       fill: #000044; }
     .footer__hand__magnet {
       fill: #ff1749; }
+  .footer__updated {
+    font-size: 0.75em;
+    margin-top: 1em; }
 
