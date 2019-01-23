@@ -213,13 +213,13 @@ h2 {
 p {
   font-size: 1em; }
 
-a {
+a:not(.plain) {
   position: relative;
   z-index: 1;
   display: inline-block;
   text-decoration: none;
   color: #000044; }
-  a:after {
+  a:not(.plain):after {
     content: '';
     display: block;
     position: absolute;
