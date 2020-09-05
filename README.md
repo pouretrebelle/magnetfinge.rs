@@ -7,4 +7,4 @@
 
 ## :rocket: Deploy it
 
-The site is deployed to [magnetfinge.rs](http://magnetfinge.rs/) using Github Pages from the `docs` folder. The app can be updated by running `yarn run build` and then committing with a `:rocket:` commit message.
+The site is deployed to [magnetfinge.rs](http://magnetfinge.rs/) using Github Pages from the `docs` folder. The app can be updated by running `npm run build` and then committing with a `:rocket:` commit message.
