@@ -1,11 +1,5 @@
 const magnets = [
   {
-    element: document.getElementById('leftMagnet'),
-    everyXFrames: 18,
-    speed: 1,
-    rings: [],
-  },
-  {
     element: document.getElementById('rightMagnet'),
     everyXFrames: 15,
     speed: 1.5,
